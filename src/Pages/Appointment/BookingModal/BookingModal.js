@@ -6,29 +6,29 @@ const BookingModal = ({ treatment, setTreatment, selectedDate }) => {
   const { name, slots } = treatment;
   const date = format(selectedDate, "PP");
 
-    const handleBooking = (event) => {
-      event.preventDefault();
-      const form = event.target;
-      const slot = form.slot.value;
-      const name = form.name.value;
-      const email = form.email.value;
-      const phone = form.phone.value;
-        // [3, 4, 5].map((value, i) => console.log(value))
-      const booking = {
-        appointmentDate: date,
-        treatment: name,
-        patient: name,
-        slot,
-        email,
-        phone,
-      };
+  const handleBooking = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const slot = form.slot.value;
+    const name = form.name.value;
+    const email = form.email.value;
+    const phone = form.phone.value;
+    //     // [3, 4, 5].map((value, i) => console.log(value))
+    const booking = {
+      appointmentDate: date,
+      treatment: name,
+      patient: name,
+      slot,
+      email,
+      phone,
+    };
 
-  //     // TODO: send data to the server
-  //     // and once data is saved then close the modal
-  //     // and display success toast
-  //     console.log(booking);
-  //     setTreatment(null);
-  //   };
+    // TODO: send data to the server
+    // and once data is saved then close the modal
+    // and display success toast
+    console.log(booking);
+    setTreatment(null);
+  };
 
   return (
     <>
